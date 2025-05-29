@@ -1,0 +1,46 @@
+// -------------------------------------------------------------------
+//  structure.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mixin" as mix;
+@use "../helpers/mediaquery" as med;
+@use "../helpers/extend";
+
+html, body {
+  height: 100%;  
+}
+
+html {
+  background: var.$BASE_BG_COLOR;
+  font-size: 62.5%;
+}
+
+body {
+  @include mix.fontsize(var.$BASE_FONT_SIZE);
+
+  @include med.media(sp) {
+    @include mix.fontsize(var.$BASE_FONT_SIZE_SP);
+  }
+
+  background: var.$BASE_BG_COLOR;
+  color: var.$BASE_TEXT_COLOR;
+  font-family: var.$BASE_FONT_FAMILY;
+  line-height: var.$BASE_LINE_HEIGHT;
+  min-height: 100%;
+  position: relative;
+  width: 100%;
+}
+
+@include med.media(sp) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .screen {
+    overflow-x: hidden;
+  }
+
+  .wrapper {
+    overflow-x: hidden;
+  }
+}

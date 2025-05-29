@@ -1,0 +1,23 @@
+<!doctype html>
+<%
+path = "./";
+category = '';
+page = 'top';
+%>
+<html lang="en">
+<%- include ('_include/_config') %>
+<%- include('_include/_head' ,{ common: config, meta: config.top })
+%>
+<body data-page="top">
+<div class="wrapper">
+  <%- include('_include/_header') %>
+  <main>
+    <img src="<%= path %>assets/vite.svg" alt="vite">
+    <%- include('_components/_column', path) %>
+    <%- include('_components/_modal', path) %>
+  </main>
+  <%- include('_components/_carousel') %>
+</div>
+<%- include('_include/_script') %>
+</body>
+</html>

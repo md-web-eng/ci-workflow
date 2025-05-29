@@ -1,0 +1,87 @@
+// -------------------------------------------------------------------
+//  state.scss
+// -------------------------------------------------------------------
+@use "../helpers/mediaquery" as med;
+
+.is-show {
+  display: inherit !important;
+}
+
+.is-hide {
+  display: none !important;
+}
+
+.is-visible {
+  visibility: visible !important;
+}
+
+.is-hidden {
+  visibility: hidden !important;
+}
+
+.is-fixed {
+  position: fixed !important;
+}
+
+.is-absolute {
+  position: absolute !important;
+}
+
+.is-overflow-hidden {
+  overflow: hidden !important;
+}
+
+.is-disable {
+  a {
+    cursor: default;
+    opacity: 0.4;
+  }
+}
+
+.align-left {
+  text-align: left;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.clear {
+  clear: both;
+}
+
+.inline {
+  display: inline !important;
+}
+
+.inline-block {
+  display: inline-block !important;
+}
+
+.is-sp {
+  @include med.media(pc) {
+    display: none;
+  }
+
+  @include med.media(tb) {
+    display: none;
+  }
+}
+
+.is-pc {
+  @include med.media(sp) {
+    display: none;
+  }
+}

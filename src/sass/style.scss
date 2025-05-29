@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+// -------------------------------------------------------------------
+//  style.scss
+// -------------------------------------------------------------------
+
+// Base
+// -------------------------------------------------------------------
+@use "base/normalize";
+@use "base/reset";
+@use "base/structure";
+@use "base/state";
+
+// Components
+// -------------------------------------------------------------------
+@use "components/button";
+@use "components/modal";
+@use "components/column";
+
+// Layout
+// -------------------------------------------------------------------
+@use "layout/header";
+@use "layout/contents";
+@use "layout/footer";
+
+// Pages
+// -------------------------------------------------------------------
+@use "pages/top";
+@use "pages/pages";
+@import "../../node_modules/swiper/swiper-bundle.css";

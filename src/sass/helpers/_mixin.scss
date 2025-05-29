@@ -1,0 +1,41 @@
+// -------------------------------------------------------------------
+//  mixin.scss
+// -------------------------------------------------------------------
+@use "sass:math";
+@use "../helpers/variables" as var;
+@use "../helpers/mediaquery" as med;
+
+// font-size-rem
+// -------------------------------------------------------------------
+@mixin fontsize($size) {
+  font-size: math.div($size, 10) * 1rem;
+}
+
+// hover
+// -------------------------------------------------------------------
+@mixin hover {
+  @include med.media(pc){
+    transition: all .3s var.$transition-easing;
+
+    &:hover {
+      @content;
+    }
+  }
+}
+
+// clearfix
+// -------------------------------------------------------------------
+@mixin clearfix {
+  zoom: 1;
+
+  &::after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+
+  &::before {
+    content: "";
+    display: table;
+  }
+}

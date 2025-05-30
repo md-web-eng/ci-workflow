@@ -32,9 +32,9 @@ jobs:
         run: yarn lint
         # ESLint 等でコードスタイルのチェックを実行
 
-      - name: テストの実行
-        run: yarn test
-        # 単体テストやユニットテストを実行
+      - name: SEOテストの実行
+        run: yarn check:seo
+        # SEOの単体テストを実行
 
       - name: ビルド
         run: yarn build

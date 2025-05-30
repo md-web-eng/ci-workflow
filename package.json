@@ -6,7 +6,7 @@
   "scripts": {
     "cleanup": "rimraf dist",
     "dev": "vite",
-    "build": "yarn prepare && yarn cleanup && tsc && vite build --mode development && yarn check:html",
+    "build": "yarn cleanup && tsc && vite build --mode development && yarn check:html",
     "release": "yarn cleanup && tsc && vite build && yarn check:html",
     "lint": "run-s -c 'lint:*'",
     "lint:es": "eslint --fix --ext .ts,.tsx --ignore-pattern .eslintignore . && prettier --write '**/*.{ts,tsx}'",

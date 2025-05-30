@@ -156,7 +156,7 @@ CVS
 *.ogg
 .cache
 *.tsbuildinfo
-dist
+
 # for react-use
 esm
 lib
@@ -171,7 +171,7 @@ storybook-static/*
 .env.test.local
 .env.production.local
 __tests__/__snapshots__/**
-dist
+
 
 certs/localhost-key.pem
 certs/localhost.pem

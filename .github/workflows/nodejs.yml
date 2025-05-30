@@ -32,6 +32,9 @@ jobs:
         run: yarn lint
         # ESLint 等でコードスタイルのチェックを実行
 
+      - name: SEOテストの前にブラウザをインストール
+        run: yarn playwright install
+
       - name: SEOテストの実行
         run: yarn check:seo
         # SEOの単体テストを実行

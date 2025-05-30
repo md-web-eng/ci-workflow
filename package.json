@@ -4,7 +4,6 @@
   "private": true,
   "version": "1.0.0",
   "scripts": {
-    "prepare": "husky",
     "cleanup": "rimraf dist",
     "dev": "vite",
     "build": "yarn prepare && yarn cleanup && tsc && vite build --mode development && yarn check:html",

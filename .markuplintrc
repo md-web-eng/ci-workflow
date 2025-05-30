@@ -1,0 +1,31 @@
+{
+  "rules": {
+    "attr-duplication": true,
+    "deprecated-attr": true,
+    "deprecated-element": true,
+    "disallowed-element": [],
+    "doctype": "always",
+    "heading-levels": true,
+    "id-duplication": true,
+    "invalid-attr": false,
+    "label-has-control": false,
+    "landmark-roles": false,
+    "neighbor-popovers": true,
+    "no-ambiguous-navigable-target-names": false,
+    "no-consecutive-br": false,
+    "no-duplicate-dt": true,
+    "no-empty-palpable-content": false,
+    "no-orphaned-end-tag": true,
+    "no-refer-to-non-existent-id": true,
+    "permitted-contents": [],
+    "placeholder-label-option": true,
+    "require-accessible-name": true,
+    "require-datetime": true,
+    "required-attr": false,
+    "required-element": [],
+    "required-h1": true,
+    "table-row-column-alignment": false,
+    "use-list": false,
+    "wai-aria": true
+  }
+}

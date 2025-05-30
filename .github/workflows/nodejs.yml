@@ -1,0 +1,44 @@
+name: 継続的インテグレーション（CI） # ワークフローの表示名（自由に設定可能）
+
+on:
+  push:
+    branches: [main, master] # main または master ブランチへの push で実行
+  pull_request: # プルリクエスト作成・更新時にも実行
+
+jobs:
+  build:
+    runs-on: ubuntu-latest # 最新の Ubuntu 環境で実行
+
+    steps:
+      - uses: actions/checkout@v4
+        # リポジトリのコードをチェックアウト（git clone 相当）
+
+      - name: Node.js のセットアップ
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22 # Node.js のバージョンを 22 に指定
+          cache: 'yarn' # Yarn の依存関係キャッシュを有効化
+          cache-dependency-path: yarn.lock # キャッシュの判定基準となる lockfile を指定
+
+      - name: Corepack を有効化
+        run: corepack enable
+        # Yarn v4 など Corepack 対応パッケージマネージャの使用を可能にする
+
+      - name: 依存パッケージのインストール
+        run: yarn install --immutable
+        # lockfile（yarn.lock）に一致しないパッケージはエラーにする（Yarn v2+）
+
+      - name: コードの整形チェック（Lint）
+        run: yarn lint
+        # ESLint 等でコードスタイルのチェックを実行
+
+      - name: SEOテストの前にブラウザをインストール
+        run: yarn playwright install
+
+      - name: SEOテストの実行
+        run: yarn check:seo
+        # SEOの単体テストを実行
+
+      - name: ビルド
+        run: yarn build
+        # プロダクション用のビルド成果物を生成

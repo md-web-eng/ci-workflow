@@ -1,0 +1,48 @@
+// -------------------------------------------------------------------
+//  variables.scss
+// -------------------------------------------------------------------
+
+// Width
+// -------------------------------------------------------------------
+$SITE_WIDTH: 1000px;
+$CONTENT_WIDTH: 960px;
+$BREAK_POINT_SP: 640px;
+$BREAK_POINT_TABLET: 960px;
+
+// Font
+// -------------------------------------------------------------------
+$BASE_FONT_SIZE: 14;
+$BASE_FONT_SIZE_SP: 13;
+$BASE_LINE_HEIGHT: 1.6;
+$BASE_FONT_FAMILY: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', meiryo, sans-serif;
+$EN_FONT_FAMILY: arial, helvetica, roboto, 'Droid Sans', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', meiryo, sans-serif;
+
+// Web Font
+// -------------------------------------------------------------------
+// @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+// $WEB_FONT_FAMILY: 'Open Sans', sans-serif;
+
+// Color
+// -------------------------------------------------------------------
+$BASE_TEXT_COLOR: #000;
+$BASE_BG_COLOR: #fff;
+$KEY_COLOR: #a02223;
+
+// Link Color
+// -------------------------------------------------------------------
+$BASE_LINK_COLOR: #a02223;
+$BASE_VISITED_COLOR: $BASE_LINK_COLOR;
+$BASE_HOVER_COLOR: $BASE_LINK_COLOR;
+$BASE_ACTIVE_COLOR: $BASE_LINK_COLOR;
+
+// Image Path
+// -------------------------------------------------------------------
+$IMAGE_DIR: "../images/";
+
+
+// Animation Setting
+// -------------------------------------------------------------------
+$OPACITY_DURATION: 1s;
+$TRANSITION_DURATION: 1s;
+$TRANSITION_EASING: cubic-bezier(0.23, 1, 0.32, 1);
+$BOUNCE_EASING: cubic-bezier(0.175, 0.885, 0.32, 1.275);

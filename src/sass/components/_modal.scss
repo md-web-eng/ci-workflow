@@ -1,0 +1,68 @@
+// -------------------------------------------------------------------
+// 	button.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mixin" as mix;
+@use "../helpers/mediaquery" as med;
+
+.modal {
+	align-items: center;
+	display: flex;
+	inset: 0;
+	justify-content: center;
+	position: fixed;
+	transition: visibility .3s;
+	visibility: hidden;
+}
+
+.modal__inner {
+	background-color: #FFF;
+	border-radius: 2px;
+	box-shadow: 0 3px 6px rgb(0 0 0 / 16%), 0 3px 6px rgb(0 0 0 / 23%);
+	left: 0;
+	margin: auto;
+	max-width: 400px;
+	opacity: 0;
+    padding: 20px;
+	position: absolute;
+	right: 0;
+	top: 50%;
+	transform: scale(.8);
+	transition: all .3s;
+}
+
+.modal.is-show {
+	background-color: rgb(0 0 0 / 40%);
+	visibility: visible;
+}
+
+.modal.is-show .modal__inner {
+	opacity: 1;
+	transform: scale(1);
+}
+
+.modal__bg {
+	cursor: pointer;
+	height: 100vh;
+	left: 0;
+	position: fixed;
+	top: 0;
+	width: 100vw;
+	z-index: -1;
+}
+
+.modal__text {
+	display: none;
+}
+
+.--error {
+	.error__text {
+		display: block;
+	}
+}
+
+.--check {
+	.check__text {
+		display: block;
+	}
+}
